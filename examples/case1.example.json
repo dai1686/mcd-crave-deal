@@ -1,0 +1,356 @@
+{
+  "store": {
+    "storeCode": "1980439",
+    "storeName": "1980439"
+  },
+  "wishes": [
+    {
+      "kw": "吉士蛋麦满分",
+      "matched": [
+        {
+          "code": "5888",
+          "name": "吉士蛋麦满分",
+          "price": "10"
+        },
+        {
+          "code": "5022",
+          "name": "猪柳蛋麦满分",
+          "price": "18"
+        }
+      ]
+    },
+    {
+      "kw": "咖啡",
+      "matched": [
+        {
+          "code": "520689",
+          "name": "鲜萃咖啡",
+          "price": "10"
+        }
+      ]
+    },
+    {
+      "kw": "薯饼",
+      "matched": [
+        {
+          "code": "4825",
+          "name": "脆薯饼",
+          "price": "8"
+        }
+      ]
+    }
+  ],
+  "plans": [
+    {
+      "name": "套餐流：吉士蛋麦满分套餐",
+      "items": [
+        {
+          "productCode": "9900003453",
+          "quantity": 1,
+          "roundList": [
+            {
+              "round": "1",
+              "comboItemList": [
+                {
+                  "code": "5888",
+                  "quantity": 1
+                }
+              ]
+            },
+            {
+              "round": "2",
+              "comboItemList": [
+                {
+                  "code": "4825",
+                  "quantity": 1
+                }
+              ]
+            },
+            {
+              "round": "3",
+              "comboItemList": [
+                {
+                  "code": "520688",
+                  "quantity": 1
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "desc": "吉士蛋麦满分套餐 ¥10.5（吉士蛋麦满分、脆薯饼、大杯鲜萃咖啡）",
+      "covered": 3,
+      "price": 17.5,
+      "original": 17.5,
+      "discount": 0.0,
+      "ok": true
+    },
+    {
+      "name": "套餐流：吉士蛋麦满分组合",
+      "items": [
+        {
+          "productCode": "9900008094",
+          "quantity": 1,
+          "roundList": [
+            {
+              "round": "1",
+              "comboItemList": [
+                {
+                  "code": "5888",
+                  "quantity": 1
+                }
+              ]
+            },
+            {
+              "round": "2",
+              "comboItemList": [
+                {
+                  "code": "520689",
+                  "quantity": 1
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "productCode": "4825",
+          "quantity": 1
+        }
+      ],
+      "desc": "吉士蛋麦满分组合 ¥7.2（吉士蛋麦满分、小杯鲜萃咖啡） + 脆薯饼 ¥8",
+      "covered": 3,
+      "price": 20.0,
+      "original": 20.0,
+      "discount": 0.0,
+      "ok": true
+    },
+    {
+      "name": "套餐流：精选麦满分套餐",
+      "items": [
+        {
+          "productCode": "9900013411",
+          "quantity": 1,
+          "roundList": [
+            {
+              "round": "1",
+              "comboItemList": [
+                {
+                  "code": "5022",
+                  "quantity": 1
+                }
+              ]
+            },
+            {
+              "round": "2",
+              "comboItemList": [
+                {
+                  "code": "4825",
+                  "quantity": 1
+                }
+              ]
+            },
+            {
+              "round": "3",
+              "comboItemList": [
+                {
+                  "code": "520688",
+                  "quantity": 1
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "desc": "精选麦满分套餐 ¥15.9（猪柳蛋麦满分、脆薯饼、大杯鲜萃咖啡）",
+      "covered": 3,
+      "price": 26.5,
+      "original": 26.5,
+      "discount": 0.0,
+      "ok": true
+    },
+    {
+      "name": "套餐流：猪柳蛋麦满分套餐",
+      "items": [
+        {
+          "productCode": "9900003458",
+          "quantity": 1,
+          "roundList": [
+            {
+              "round": "1",
+              "comboItemList": [
+                {
+                  "code": "5022",
+                  "quantity": 1
+                }
+              ]
+            },
+            {
+              "round": "2",
+              "comboItemList": [
+                {
+                  "code": "4825",
+                  "quantity": 1
+                }
+              ]
+            },
+            {
+              "round": "3",
+              "comboItemList": [
+                {
+                  "code": "520688",
+                  "quantity": 1
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "desc": "猪柳蛋麦满分套餐 ¥15.9（猪柳蛋麦满分、脆薯饼、大杯鲜萃咖啡）",
+      "covered": 3,
+      "price": 26.5,
+      "original": 26.5,
+      "discount": 0.0,
+      "ok": true
+    },
+    {
+      "name": "全单点",
+      "items": [
+        {
+          "productCode": "5888",
+          "quantity": 1
+        },
+        {
+          "productCode": "520689",
+          "quantity": 1
+        },
+        {
+          "productCode": "4825",
+          "quantity": 1
+        }
+      ],
+      "desc": "吉士蛋麦满分 ¥10 + 鲜萃咖啡 ¥10 + 脆薯饼 ¥8",
+      "covered": 3,
+      "price": 28.0,
+      "original": 28.0,
+      "discount": 0.0,
+      "ok": true
+    },
+    {
+      "name": "套餐流：火腿扒麦满分套餐",
+      "items": [
+        {
+          "productCode": "9900003449",
+          "quantity": 1,
+          "roundList": [
+            {
+              "round": "1",
+              "comboItemList": [
+                {
+                  "code": "1254",
+                  "quantity": 1
+                }
+              ]
+            },
+            {
+              "round": "2",
+              "comboItemList": [
+                {
+                  "code": "4825",
+                  "quantity": 1
+                }
+              ]
+            },
+            {
+              "round": "3",
+              "comboItemList": [
+                {
+                  "code": "520688",
+                  "quantity": 1
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "productCode": "5888",
+          "quantity": 1
+        }
+      ],
+      "desc": "火腿扒麦满分套餐 ¥11.1（火腿扒麦满分、脆薯饼、大杯鲜萃咖啡） + 吉士蛋麦满分 ¥10",
+      "covered": 3,
+      "price": 28.5,
+      "original": 28.5,
+      "discount": 0.0,
+      "ok": true
+    }
+  ],
+  "best": {
+    "name": "套餐流：吉士蛋麦满分套餐",
+    "items": [
+      {
+        "productCode": "9900003453",
+        "quantity": 1,
+        "roundList": [
+          {
+            "round": "1",
+            "comboItemList": [
+              {
+                "code": "5888",
+                "quantity": 1
+              }
+            ]
+          },
+          {
+            "round": "2",
+            "comboItemList": [
+              {
+                "code": "4825",
+                "quantity": 1
+              }
+            ]
+          },
+          {
+            "round": "3",
+            "comboItemList": [
+              {
+                "code": "520688",
+                "quantity": 1
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "desc": "吉士蛋麦满分套餐 ¥10.5（吉士蛋麦满分、脆薯饼、大杯鲜萃咖啡）",
+    "covered": 3,
+    "price": 17.5,
+    "original": 17.5,
+    "discount": 0.0,
+    "ok": true
+  },
+  "baseline": {
+    "name": "全单点",
+    "items": [
+      {
+        "productCode": "5888",
+        "quantity": 1
+      },
+      {
+        "productCode": "520689",
+        "quantity": 1
+      },
+      {
+        "productCode": "4825",
+        "quantity": 1
+      }
+    ],
+    "desc": "吉士蛋麦满分 ¥10 + 鲜萃咖啡 ¥10 + 脆薯饼 ¥8",
+    "covered": 3,
+    "price": 28.0,
+    "original": 28.0,
+    "discount": 0.0,
+    "ok": true
+  },
+  "saved": 10.5,
+  "saved_ratio": 37.5
+}

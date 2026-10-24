@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>麦麦心愿单 · 想吃啥，帮你找最便宜的吃法</title>
+<style>
+  :root{
+    --red:#DA291C; --yellow:#FFC72C; --ink:#1a1a1a; --sub:#5b5b5b;
+    --bg:#FFFDF7; --card:#ffffff; --line:#EFE7D8; --green:#0B8A4F;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);
+       font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;
+       line-height:1.7;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:820px;margin:0 auto;padding:0 20px 64px}
+  header{background:linear-gradient(135deg,var(--red),#F04E23);color:#fff;padding:44px 20px 40px;text-align:center}
+  header h1{margin:0 0 10px;font-size:34px;letter-spacing:1px}
+  header p{margin:0 auto;max-width:620px;font-size:16px;opacity:.95}
+  .badge{display:inline-block;margin-top:16px;padding:5px 14px;border-radius:999px;
+         background:rgba(255,255,255,.18);font-size:13px;border:1px solid rgba(255,255,255,.35)}
+  h2{font-size:22px;margin:44px 0 14px;padding-left:12px;border-left:5px solid var(--yellow)}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px 22px;margin:14px 0;
+        box-shadow:0 2px 10px rgba(0,0,0,.04)}
+  .save{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+  .price{font-size:26px;font-weight:800}
+  .old{color:var(--sub);text-decoration:line-through;font-size:18px}
+  .tag{background:var(--green);color:#fff;font-size:13px;padding:3px 10px;border-radius:6px;font-weight:700}
+  .wish{font-size:15px;color:var(--sub);margin-bottom:8px}
+  .plan{display:flex;justify-content:space-between;gap:12px;padding:9px 0;border-top:1px dashed var(--line);font-size:15px}
+  .plan:first-of-type{border-top:none}
+  .plan.best{color:var(--green);font-weight:700}
+  .plan .nm{flex:1}
+  pre{background:#1E1E1E;color:#E8E8E8;padding:16px 18px;border-radius:12px;overflow-x:auto;font-size:13px;line-height:1.6}
+  code{font-family:"JetBrains Mono",Consolas,Menlo,monospace}
+  .steps{counter-reset:s}
+  .step{position:relative;padding-left:44px;margin:12px 0}
+  .step:before{counter-increment:s;content:counter(s);position:absolute;left:0;top:2px;
+    width:28px;height:28px;border-radius:50%;background:var(--yellow);color:#7a4b00;
+    font-weight:800;font-size:14px;display:flex;align-items:center;justify-content:center}
+  .cta{display:inline-block;margin-top:8px;background:var(--red);color:#fff;text-decoration:none;
+       padding:12px 26px;border-radius:10px;font-weight:700;font-size:16px}
+  .cta:hover{opacity:.9}
+  .note{font-size:13px;color:var(--sub)}
+  footer{text-align:center;color:var(--sub);font-size:13px;margin-top:40px}
+  table{width:100%;border-collapse:collapse;font-size:15px}
+  td,th{padding:9px 6px;border-bottom:1px solid var(--line);text-align:left}
+  th{color:var(--sub);font-weight:600;font-size:13px}
+</style>
+</head>
+<body>
+<header>
+  <h1>🍔 麦麦心愿单</h1>
+  <p>你说想吃什么，它找出<strong>能把你心愿全包住的最便宜吃法</strong>。<br/>
+     价格全部来自麦当劳官方 MCP 的真实算价，不猜、不估算。</p>
+  <span class="badge">麦当劳程序员创意开发大赛 · 参赛作品</span>
+</header>
+
+<div class="wrap">
+
+  <h2>一句话原理</h2>
+  <div class="card">
+    麦当劳的「套餐」不是固定搭配，而是一组<strong>可选槽位</strong>——主食 / 小食 / 饮料……
+    每个槽位有多个选项，而且<strong>很多替换是 +¥0</strong>。<br/><br/>
+    所以「想吃 A + B」往往不必单点两次：某个套餐的槽位里可能正好能选到 A 和 B，整体更便宜。
+    问题是没有人会为了省几块钱，把几十个套餐的槽位挨个点开看一遍。<strong>这个 Skill 替你看完了。</strong>
+  </div>
+
+  <h2>实测：真的能省</h2>
+  <p class="note">唐山华北理工大学（曹妃甸校区）餐厅 · 早餐时段 · 2026-10-24 官方接口实调</p>
+
+  <div class="card">
+    <div class="wish">🎯 想吃：吉士蛋麦满分 + 咖啡</div>
+    <div class="save">
+      <span class="price">¥12.0</span>
+      <span class="old">¥20.0</span>
+      <span class="tag">省 ¥8.0 · 40%</span>
+    </div>
+    <div style="margin-top:10px">
+      <div class="plan best"><span class="nm">吉士蛋麦满分组合（麦满分 + 小杯鲜萃咖啡）</span><span>¥12.0</span></div>
+      <div class="plan"><span class="nm">吉士蛋麦满分套餐（麦满分 + 脆薯饼 + 大杯咖啡）</span><span>¥17.5</span></div>
+      <div class="plan"><span class="nm">全单点（麦满分 + 咖啡）</span><span>¥20.0</span></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="wish">🎯 想吃：吉士蛋麦满分 + 咖啡 + 薯饼</div>
+    <div class="save">
+      <span class="price">¥17.5</span>
+      <span class="old">¥28.0</span>
+      <span class="tag">省 ¥10.5 · 37.5%</span>
+    </div>
+  </div>
+
+  <h2>怎么用</h2>
+  <pre><code>export MCD_MCP_TOKEN=你的Token
+
+python scripts/crave.py --want "吉士蛋麦满分,咖啡" \
+                        --city 唐山市 --keyword 华北理工大学</code></pre>
+
+  <pre><code>🍔 门店：麦当劳唐山华北理工大学(曹妃甸校区)餐厅（1980439）
+🎯 你的心愿：
+   · 吉士蛋麦满分 → 吉士蛋麦满分 ¥10
+   · 咖啡 → 鲜萃咖啡 ¥10
+
+💰 比价结果（已用官方接口真实算价）：
+   ¥12.0    套餐流：吉士蛋麦满分组合  ✅ 最省
+   ¥17.5    套餐流：吉士蛋麦满分套餐
+   ¥20.0    全单点
+
+🤑 比全单点省 ¥8.0（40.0%）</code></pre>
+
+  <h2>它怎么算的</h2>
+  <div class="steps card">
+    <div class="step"><strong>定位门店</strong>　query-nearby-stores → 拿到 storeCode</div>
+    <div class="step"><strong>拉实时菜单</strong>　query-meals → 当前时段在售商品与价格</div>
+    <div class="step"><strong>心愿匹配</strong>　把「咖啡」这类口语匹配到具体商品（含套餐内子项）</div>
+    <div class="step"><strong>拆套餐</strong>　query-meal-detail → 展开每个套餐的槽位与可选项</div>
+    <div class="step"><strong>枚举方案</strong>　全单点基线 / 各套餐覆盖方案 + 未覆盖心愿补齐</div>
+    <div class="step"><strong>真实算价</strong>　calculate-price 逐个算到手价（套餐用 roundList 指定槽位）</div>
+    <div class="step"><strong>输出结果</strong>　按到手价排序，标出最省方案与节省金额</div>
+  </div>
+  <p class="note">关键：calculate-price 支持 roundList，所以「套餐能不能覆盖我的心愿」是<strong>算出来的</strong>，不是靠菜名猜的。</p>
+
+  <h2>一些说明</h2>
+  <table class="card">
+    <tr><th>项目</th><th>说明</th></tr>
+    <tr><td>依赖</td><td>零第三方依赖，Python 3.9+ 标准库即可</td></tr>
+    <tr><td>安全性</td><td>只读查询与算价，不下单、不领券；Token 只走环境变量</td></tr>
+    <tr><td>时段</td><td>菜单随早餐 / 正餐 / 夜市变化，结果以调用时刻实时数据为准</td></tr>
+    <tr><td>价格口径</td><td>菜单展示价可能含早餐卡等门槛优惠，真实到手价一律以 calculate-price 为准</td></tr>
+  </table>
+
+  <div style="text-align:center;margin-top:34px">
+    <a class="cta" id="repo-link" href="#">⭐ 去 GitHub 点个 Star</a>
+    <div class="note" style="margin-top:10px">
+      本项目为麦当劳程序员创意开发大赛参赛作品，由参赛者独立开发，非麦当劳官方产品。<br/>
+      餐品信息、价格及供应状态以麦当劳官方渠道的实时结果为准。
+    </div>
+  </div>
+
+  <footer>mcd-crave-deal · Powered by 麦当劳中国官方 MCP</footer>
+</div>
+<script>
+  // 仓库地址
+  document.getElementById('repo-link').href = 'https://github.com/dai1686/mcd-crave-deal';
+</script>
+</body>
+</html>
